@@ -1,4 +1,4 @@
-
+import {cart} from '../script/cart.js';
 let productHtml ='';
 products.forEach((product)=>{
   productHtml+= `
@@ -21,7 +21,7 @@ products.forEach((product)=>{
           </div>
 
           <div class="product-price">
-            ${(product.price/100).toFixed(2)}
+            ${(product.priceCents/100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">

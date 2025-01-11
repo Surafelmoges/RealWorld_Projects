@@ -1,5 +1,6 @@
 import {cart} from '../script/cart.js';
 import { products} from '../data/products.js';
+import {formatCurrency} from './utils/money.js';
 let cartSummary ='';
 cart.forEach((cartItem)=>{
   const productId =cartItem.productID;
@@ -24,7 +25,7 @@ cartSummary +=`
                   ${machingProduct.name}
                 </div>
                 <div class="product-price">
-                  ${machingProduct.priceCents/100}
+                  $${formatCurrency(machingProduct.priceCents)}
                 </div>
                 <div class="product-quantity">
                   <span>
